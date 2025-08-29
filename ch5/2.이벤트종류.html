@@ -115,19 +115,23 @@
             const spanPrint = document.querySelectorAll('.print');
 
             inputUid.addEventListener('focus', function(){
+                // 커서가 입력될때
                 spanPrint[0].innerText = 'focus!';
             });
 
             // 아이디 중복 확인 시 사용
             inputPass.addEventListener('focusout', function(){
+                // 커서가 빠져 나갈때
                 spanPrint[1].innerText = 'focusout!';
             });
 
             inputAddr.addEventListener('change', function(){
+                // 선택박스가 변경될때
                 spanPrint[2].innerText = this.value;
             });
             
             formUser.addEventListener('submit', function(){
+                // 폼 전송버튼을 클릭했을때(전송 수동처리)
                 alert('전송시작!');
             });
 
